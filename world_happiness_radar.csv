@@ -1,0 +1,21 @@
+key,value,category
+Africa,0.7291,Social Support
+Oceana,0.8827,Social Support
+Asia,0.7941,Social Support
+America,0.8471,Social Support
+Europe,0.9024,Social Support
+Africa,0.721,Freedom Make Life Choices
+Oceana,0.8319,Freedom Make Life Choices
+Asia,0.8235,Freedom Make Life Choices
+America,0.8358,Freedom Make Life Choices
+Europe,0.8311,Freedom Make Life Choices
+Africa,-0.0165,Generosity
+Oceana,-0.0099,Generosity
+Asia,0.0605,Generosity
+America,-0.053,Generosity
+Europe,-0.0371,Generosity
+Africa,0.7648,Perceptions of Corruption
+Oceana,0.6704,Perceptions of Corruption
+Asia,0.7302,Perceptions of Corruption
+America,0.7711,Perceptions of Corruption
+Europe,0.6696,Perceptions of Corruption

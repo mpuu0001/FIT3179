@@ -1,0 +1,102 @@
+[
+ {
+   "key": "Africa",
+   "value": 0.7291,
+   "category": "Social Support"
+ },
+ {
+   "key": "Oceana",
+   "value": 0.8827,
+   "category": "Social Support"
+ },
+ {
+   "key": "Asia",
+   "value": 0.7941,
+   "category": "Social Support"
+ },
+ {
+   "key": "America",
+   "value": 0.8471,
+   "category": "Social Support"
+ },
+ {
+   "key": "Europe",
+   "value": 0.9024,
+   "category": "Social Support"
+ },
+ {
+   "key": "Africa",
+   "value": 0.721,
+   "category": "Freedom Make Life Choices"
+ },
+ {
+   "key": "Oceana",
+   "value": 0.8319,
+   "category": "Freedom Make Life Choices"
+ },
+ {
+   "key": "Asia",
+   "value": 0.8235,
+   "category": "Freedom Make Life Choices"
+ },
+ {
+   "key": "America",
+   "value": 0.8358,
+   "category": "Freedom Make Life Choices"
+ },
+ {
+   "key": "Europe",
+   "value": 0.8311,
+   "category": "Freedom Make Life Choices"
+ },
+ {
+   "key": "Africa",
+   "value": -0.0165,
+   "category": "Generosity"
+ },
+ {
+   "key": "Oceana",
+   "value": -0.0099,
+   "category": "Generosity"
+ },
+ {
+   "key": "Asia",
+   "value": 0.0605,
+   "category": "Generosity"
+ },
+ {
+   "key": "America",
+   "value": -0.053,
+   "category": "Generosity"
+ },
+ {
+   "key": "Europe",
+   "value": -0.0371,
+   "category": "Generosity"
+ },
+ {
+   "key": "Africa",
+   "value": 0.7648,
+   "category": "Perceptions of Corruption"
+ },
+ {
+   "key": "Oceana",
+   "value": 0.6704,
+   "category": "Perceptions of Corruption"
+ },
+ {
+   "key": "Asia",
+   "value": 0.7302,
+   "category": "Perceptions of Corruption"
+ },
+ {
+   "key": "America",
+   "value": 0.7711,
+   "category": "Perceptions of Corruption"
+ },
+ {
+   "key": "Europe",
+   "value": 0.6696,
+   "category": "Perceptions of Corruption"
+ }
+]
