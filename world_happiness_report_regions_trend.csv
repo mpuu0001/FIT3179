@@ -1,4 +1,4 @@
-Country,Regional.indicator,Year,Life.Ladder,GDP,Social.Support,Life.Expectancy,Freedom.Make.Life.Choices,Generosity,Perceptions.of.Corruption
+Country,Regional_indicator,Year,Life.Ladder,GDP,Social.Support,Life.Expectancy,Freedom.Make.Life.Choices,Generosity,Perceptions.of.Corruption
 Afghanistan,Asia,2014,3.131,7.718,0.526,52.88,0.509,0.104,0.871
 Afghanistan,Asia,2015,3.983,7.702,0.529,53.2,0.389,0.08,0.881
 Afghanistan,Asia,2016,4.22,7.697,0.559,53,0.523,0.042,0.793
