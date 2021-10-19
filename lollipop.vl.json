@@ -1,0 +1,104 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "",
+  "width": 500,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/mpuu0001/FIT3179/master/world_happiness_report_regions_lollipops.csv"
+  },
+  "layer": [
+    {
+      "mark": {"type": "bar", "size": 16, "filled": true, "color": "#440154FF"},
+      "encoding": {
+        "x": {
+          "field": "Regional Indicator",
+          "type": "nominal",
+          "axis": {"labelAngle": 0}
+        },
+        "y": {
+          "aggregate": "mean",
+          "field": "Life Expectancy",
+          "title": "Average Life Expectancy",
+          "scale": {"domain": [55, 72]}
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "tick",
+        "size": 500,
+        "height": 200,
+        "filled": true,
+        "color": "#4c4e4e"
+      },
+      "encoding": {"y": {"aggregate": "mean", "field": "Life Expectancy"}}
+    },
+    {
+      "mark": {
+        "type": "point",
+        "size": 1000,
+        "filled": true,
+        "color": "#FDE725FF",
+        "tooltip": "African Average Age: 59",
+        "y": 220,
+        "x": 50
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "size": 1000,
+        "filled": true,
+        "color": "#FDE725FF",
+        "tooltip": "American Average Age: 67",
+        "y": 90,
+        "x": 150
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "size": 1000,
+        "filled": true,
+        "color": "#FDE725FF",
+        "tooltip": "Asian Average Age: 66",
+        "y": 100,
+        "x": 250
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "size": 1000,
+        "filled": true,
+        "color": "#FDE725FF",
+        "tooltip": "European Average Age: 71",
+        "y": 30,
+        "x": 350
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "size": 1000,
+        "filled": true,
+        "color": "#FDE725FF",
+        "tooltip": "Oceanian Average Age: 66",
+        "y": 100,
+        "x": 450
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontWeight": "lighter",
+        "fontSize": 9,
+        "x": 55,
+        "y": 110,
+        "opacity": 0.008
+      },
+      "encoding": {"text": {"value": "Global Average Age: 65"}}
+    }
+  ],
+  "config": {}
+}

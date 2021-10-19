@@ -1,0 +1,161 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "title": "2D Correlation Heatmaps of All Factors",
+  "width": 300,
+  "height": 300,
+  "padding": 5,
+  "autosize": "pad",
+  "data": [
+    {
+      "name": "source",
+      "url": "https://raw.githubusercontent.com/mpuu0001/FIT3179/master/world_happiness.json"
+    },
+    {
+      "name": "density",
+      "source": "source",
+      "transform": [
+        {
+          "type": "kde2d",
+          "size": [{"signal": "width"}, {"signal": "height"}],
+          "x": {"expr": "scale('x', datum[Valuex])"},
+          "y": {"expr": "scale('y', datum[Valuey])"},
+          "bandwidth": {"signal": "[Bandwidthx, Bandwidthy]"},
+          "cellSize": 2
+        },
+        {
+          "type": "heatmap",
+          "field": "grid",
+          "color": {"expr": "scale('density', datum.$value / datum.$max)"},
+          "opacity": 1
+        }
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "name": "Valuex",
+      "value": "GDP",
+      "bind": {
+        "input": "select",
+        "options": [
+          "GDP",
+          "Ladder Score",
+          "Life Expectancy",
+          "Freedom Make Life Choices",
+          "Generosity",
+          "Perceptions of Corruption"
+        ]
+      }
+    },
+    {
+      "name": "Bandwidthx",
+      "value": -1,
+      "bind": {"input": "range", "min": -1, "max": 100, "step": 1}
+    },
+    {
+      "name": "Valuey",
+      "value": "Social Support",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Social Support",
+          "Generosity",
+          "Ladder Score ",
+          "Life Expectancy",
+          "Perceptions of Corruption",
+          "Freedom Make Life Choices",
+          "GDP"
+        ]
+      }
+    },
+    {
+      "name": "Bandwidthy",
+      "value": 10,
+      "bind": {"input": "range", "min": 10, "max": 100, "step": 1}
+    },
+    {"name": "title", "value": "Correlation"}
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "linear",
+      "round": true,
+      "nice": true,
+      "zero": true,
+      "domain": {"data": "source", "field": {"signal": "Valuex"}},
+      "range": "width"
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "round": true,
+      "nice": true,
+      "zero": true,
+      "domain": {"data": "source", "field": {"signal": "Valuey"}},
+      "range": "height"
+    },
+    {
+      "name": "density",
+      "type": "linear",
+      "zero": true,
+      "domain": [0, 1],
+      "range": {"scheme": "viridis"}
+    }
+  ],
+  "axes": [
+    {
+      "scale": "y",
+      "domain": false,
+      "orient": "left",
+      "titlePadding": 5,
+      "title": {"signal": "Valuey"},
+      "offset": 2
+    }
+  ],
+  "legends": [
+    {
+      "fill": "density",
+      "title": {"signal": "title"},
+      "gradientLength": {"signal": "height - 28"}
+    }
+  ],
+  "layout": {"bounds": "flush", "columns": 3, "padding": 10},
+  "marks": [
+    {
+      "type": "group",
+      "from": {
+        "facet": {"name": "facet", "data": "density", "groupby": "null"}
+      },
+      "encode": {
+        "update": {"width": {"signal": "width"}, "height": {"signal": "height"}}
+      },
+      "axes": [
+        {
+          "scale": "x",
+          "domain": false,
+          "orient": "bottom",
+          "tickCount": 5,
+          "labelFlush": true,
+          "title": {"signal": "Valuex"}
+        }
+      ],
+      "marks": [
+        {
+          "type": "image",
+          "from": {"data": "facet"},
+          "encode": {
+            "update": {
+              "x": {"value": 0},
+              "y": {"value": 0},
+              "image": {"field": "image"},
+              "width": {"signal": "width"},
+              "height": {"signal": "height"},
+              "aspect": {"value": false}
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "config": {}
+}
